@@ -1,0 +1,80 @@
+﻿<style type="text/css">
+    .form-horizontal input.ng-invalid.ng-dirty {
+        border-color: #FA787E;
+    }
+
+    .form-horizontal input.ng-valid.ng-dirty {
+        border-color: #78FA89;
+    }
+</style>
+<div class="view">
+    <div class="container">
+        <div class="row">
+            <nav class= "navbar navbar-default" role= "navigation" >
+                <div class= "navbar-header" >
+                    <a class= "navbar-brand" href= "#/events"><i class="glyphicon glyphicon-th-large"></i> Events List </a>
+                    <a ng-show="event._id" class= "navbar-brand" href= "#/edit-event/0"><i class="glyphicon glyphicon-plus"></i> Create Event </a>
+                    <a ng-show="event._id" class= "navbar-brand pull-right"><i class="glyphicon glyphicon-edit"></i> Currently Editing Event ID: {{event.id}}</a>
+                </div>
+            </nav>
+            <header>
+                <h3>{{title}}</h3>
+            </header>
+            <div class="col-md-12">
+
+                <form role="form" name="myForm" class="form-horizontal">
+                    <div class="row">
+                        <div class= "form-group" ng-class="{error: myForm.name.$invalid}">
+                            <label class= "col-md-2"> Dates </label>
+                            <div class="col-md-4">
+                                <input name="name" ng-model="event.dates" type= "text" class= "form-control" placeholder="Dates to held" required/>
+                                <span ng-show="myForm.name.$dirty && myForm.name.$invalid" class="help-inline">Dates required</span>
+                            </div>
+                        </div>
+                        <div class= "form-group">
+                            <label class= "col-md-2"> Sport </label>
+                            <div class="col-md-4">
+                                <input name="email" ng-model="event.sport" type= "text" class= "form-control" placeholder="Enter sport" required/>
+                                <span ng-show="myForm.email.$error.email" class="help-inline">Sport required</span>
+                            </div>
+                        </div>
+                        <div class= "form-group">
+                            <label class= "col-md-2">Category </label>
+                            <div class="col-md-4">
+                                <input ng-model="event.category" type= "text" class= "form-control" placeholder= "M, W, M/W"/>
+                            </div>
+                        </div>
+                        <div class= "form-group">
+                            <label class= "col-md-2">Teams </label>
+                            <div class="col-md-4">
+                                <input ng-model="event.teams" type= "text" class= "form-control" placeholder= "Teams"/>
+                            </div>
+                        </div>
+                        <div class= "form-group">
+                            <label class= "col-md-2">Organized By </label>
+                            <div class="col-md-4">
+                                <input ng-model="event.org_by" type= "text" class= "form-control" placeholder= "Organized By"/>
+                            </div>
+                        </div>
+                        <div class= "form-group">
+                            <label class= "col-md-2">Venue </label>
+                            <div class="col-md-4">
+                                <input ng-model="event.venue" type= "text" class= "form-control" placeholder= "Venue"/>
+                            </div>
+                        </div>
+                        <div class= "form-group">
+                            <label class= "col-md-2"></label>
+                            <div class="col-md-4">
+                                <a href="#/" class="btn">Cancel</a>
+                                <button ng-click="saveEvent(event);"
+                                        ng-disabled="isClean() || myForm.$invalid"
+                                        class="btn btn-primary">{{buttonText}}</button>
+                                <button ng-click="deleteEvent(event)"
+                                        ng-show="event._id" class="btn btn-warning">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div></div>
+    </div>
+</div>

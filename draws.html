@@ -1,0 +1,423 @@
+<!--
+sasithawathmal@gmail.com
+05/04/2015
+-->
+<!DOCTYPE html>
+<html data-ng-app="eventsApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DRAWS</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300|Coda|Arimo' rel='stylesheet' type='text/css'>
+    <script src="js/jquery.min.js"></script>
+    <!--<script src="js/angular.min.js"></script>
+    <script src="js/events.js" type="text/javascript"></script>
+    -->
+    <style>
+
+        .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+            color: #ffffff;
+            background-color: #ea2e2b;
+        }
+        .nav-pills > li > a {
+            border-radius: 0;
+        }
+        .nav > li > a {
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            background-color: #e3e3e3;
+        }
+        .nav > li > a:hover {
+            color: #ea2e2b;
+
+        }
+        a {
+            color: #ea2e2b;
+            text-decoration: none;
+        }
+        a {
+            background-color: transparent;
+        }
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        user agent stylesheeta:-webkit-any-link {
+            color: -webkit-link;
+            text-decoration: underline;
+            cursor: auto;
+        }
+        #draw-diagram img{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            display: block;
+        }
+
+        #draw-sports{
+            text-transform: uppercase;
+            font-size: larger;
+        }
+        .mw{
+            font-size: inherit;
+        }
+
+        #atstbx{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    </style>
+
+</head>
+<body data-ng-controller="EventListCtrl">
+
+<div class="container-fluid">
+    <!--<div class="row social_bar">
+        <ul>
+            <li></li>
+        </ul>
+    </div>-->
+    <div class="row top_menu_r1 text-uppercase">
+          <div id="logo" class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+            <!--<img src="images/logo.png">-->
+            <img class="img-responsive" src="images/logo.png"
+                 style="margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="container">
+
+
+            <div class="nav_btns">
+                <div class="nav_btn">
+                    <a href="index.html">
+                        HOME
+                    </a>
+                </div>
+                <div class="nav_btn">
+                    <a href="scoretable.html">
+                        POINTS TABLE
+                    </a>
+                </div>
+                <div class="nav_btn">
+                    <a href="events.html">
+                        EVENTS
+                    </a>
+                </div>
+                <div class="nav_btn">
+                    <a href="draws.html">
+                        DRAWS
+                    </a>
+                </div>
+                <div class="nav_btn blink">
+                    <a href="live.html">
+                        LIVE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row top_menu_r2">
+
+    </div>
+    <!--end of header-->
+
+    <br><br>
+
+    <div class="container">
+<!--
+
+        <script src="https://www.gliffy.com/diagramEmbed.js" type="text/javascript"> </script>
+        <script type="text/javascript"> gliffy_did = "8247875"; embedGliffy(); </script>
+-->
+
+        <div class="row">
+            <div class="col-xs-12 col-md-3" id="draw-sports">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active" id="crk"><a href="#crk">cricket <span class="label label-default pull-right mw">M</span></a></li>
+                    <li id="rby"><a href="#rby">rugby <span class="label label-default pull-right mw">M</span></a></li>
+                    <li id="bbm"><a href="#bbm">basketball <span class="label label-default pull-right mw">M</span></a></a></li>
+                    <li id="bbw"><a href="#bbw">basketball <span class="label label-danger pull-right mw">W</span></a></a></li>
+                    <li id="hky"><a href="#hky">hockey <span class="label label-default pull-right mw">M</span></a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 col-md-9" id="draw-diagram">
+
+            </div>
+            <br>
+
+
+        </div>
+        <div class="row" style="padding: 10px 10px 10px 10px;">
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="col-xs-12 col-md-6 pull-right center-block text-center addthis_native_toolbox"></div>
+
+        </div>
+
+
+    </div>
+
+    <!--end of body -->
+    <footer class="footer container-fluid">
+        <div id="footer-wrapper">
+            <div class="row" style="background-color: rgb(234, 46, 43);">
+                <!--<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                    <img class="img-responsive hidden-xs hidden-sm" src="images/logo.png"
+                         style="margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
+                     style="text-align: right; vertical-align: central; height: 100%; padding-top: 20px; padding-bottom: 20px;">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-xs-push-1 col-lg-push-0 col-md-push-0 col-sm-push-0">
+                        <a href="index.html">HOME</a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                        <a href="scoretable.html">POINTS TABLE</a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <a href="events.html">EVENTS</a>
+                    </div>
+<!--                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <a href="#">HISTORY</a>
+                    </div>
+-->                    <!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+                    </div>
+
+
+
+                </div>-->
+            </div>
+        </div>
+        <div class="container" id="bottom-footer" style="padding-top: 30px; text-align: center; color: grey">
+            <div class="row" style="text-align: left;">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+
+
+
+
+                    <div id="block-simplenews-0" class="clearfix block block-simplenews">
+
+
+                        <div class="titlecontainer"><h4>Receive our Newsletter</h4></div>
+
+
+                        <div class="content">
+
+                            <form action="http://moraspirit.com/" method="post" id="simplenews-subscriptions-multi-block-form" accept-charset="UTF-8">
+                                <div>
+                                    <div id="edit-newsletters" class="form-checkboxes">
+                                        <div class="form-item form-type-checkbox form-item-newsletters-58">
+                                            <input id="edit-newsletters-58" name="newsletters[58]" value="58" class="form-checkbox" type="checkbox">
+                                            <label class="option" for="edit-newsletters-58" >MoraSpirit newsletter </label>
+
+
+                                        </div>
+                                    </div>
+                                    <input name="form_build_id" value="form-ZAUCxflEAFf7D7SBXEO7s1FogUNBH55DpUjhV0eZ3PE" type="hidden">
+                                    <input name="form_id" value="simplenews_subscriptions_multi_block_form" type="hidden">
+                                    <div class="form-item form-type-textfield form-item-mail">
+                                        <label for="edit-mail">E-mail <span class="form-required" title="This field is required.">*</span></label>
+                                        <br>
+                                        <input id="INPUT_1" name="mail" value="" size="24" maxlength="128" class="form-text required" type="text" style="padding-right: 20px;">
+                                    </div>
+
+                                    <input class=" btn form-submit text-black" id="edit-subscribe" name="op" value="Subscribe" type="submit" style="margin-bottom: 5px; margin-right: 5px;">
+                                    <input class=" btn form-submit text-black" id="edit-unsubscribe" name="op" value="Unsubscribe" type="submit" style="margin-bottom: 5px; margin-right: 5px;">
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <table>
+                        <tbody><tr>
+                            <td style="border: none; vertical-align: top;">
+                                <a href="http://old.moraspirit.com" target="_blank" style="line-height: 200%; font-weight: 300;">| Archives</a><br>
+                                <!--<a href="http://moraspirit.com/careers" style="line-height: 250%; font-weight: 300;">| Careers</a><br>-->
+                                <a href="http://moraspirit.com/site-map" style="line-height: 250%; font-weight: 300;">| Site Map</a><br>
+                                <a data-toggle="modal" role="button" href="#myModal3" style="line-height: 250%; font-weight: 300;">| Report a bug</a><br>
+                                <a href="sites/default/files/spaces.pdf" target="_blank" style="line-height: 200%; font-weight: 300;">| Advertise with us</a><br>
+
+                            </td>
+
+                            <td style="border:none;">
+
+                                <a href="https://www.facebook.com/moraspirit.fanpage" target="_blank" style="line-height: 200%; font-weight: 300;">| Facebook</a><br>
+                                <a href="https://twitter.com/moraspiritNews" target="_blank" style="line-height: 200%; font-weight: 300;">| Twitter</a><br>
+                                <a href="https://plus.google.com/108795907592684921602/posts" target="_blank" style="line-height: 200%; font-weight: 300;">| Google Plus</a><br>
+                                <a href="http://www.youtube.com/user/moraspiritNews?feature=watch" target="_blank" style="line-height: 200%; font-weight: 300;">| Youtube</a><br>
+                                <a href="http://www.linkedin.com/company/moraspirit-initiative" target="_blank" style="line-height: 200%; font-weight: 300;">| LinkedIn</a><br>
+                                <a href="http://www.stumbleupon.com/submit" target="_blank" style="line-height: 200%; font-weight: 300;">| Bookmark us</a><br>
+                            </td>
+                        </tr>
+
+                        </tbody></table>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <table>
+                        <tbody><tr>
+                            <td style="border: none; float: right;"><img src="http://moraspirit.com/sites/default/files/footer_contact/address.png"></td>
+                            <td style="border: none; color:#B2B2B2">
+                                MoraSpirit Initiative,<br>
+                                125/56A, Peterson Lane,<br>
+                                Colombo 06.
+                            </td>
+                        </tr><tr>
+
+                        </tr><tr>
+                            <td style="border: none; float: right;"><img src="http://moraspirit.com/sites/default/files/footer_contact/email.png"></td>
+                            <td style="border: none; color:#B2B2B2">
+                                info@moraspirit.com
+                            </td>
+                        </tr><tr>
+
+                        </tr><tr>
+                            <td style="border: none; float: right;"><img src="http://moraspirit.com/sites/default/files/footer_contact/phone.png"></td>
+                            <td style="border: none; color:#B2B2B2">
+                                +(94) 767895100
+                            </td>
+                        </tr><tr>
+
+                        </tr></tbody></table>
+
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+
+                    <img class="imageblock-image img-responsive" typeof="foaf:Image" src="http://moraspirit.com/sites/default/files/styles/medium/public/imageblock/moraspirit_logo.png?itok=JxjE2Hat" alt="MoraSpirit Logo" title="MoraSpirit">
+                </div>
+
+            </div>
+
+
+            <div class="row" style="padding-bottom: 15px">
+                <div id="DIV_1">
+                    <div id="DIV_2">
+                        <div id="DIV_3">
+                            <div id="DIV_4">
+                                ©2015 All Rights Reserved | <a href="http://moraspirit.com" id="A_5" style="color: rgb(240, 40, 40);">www.moraspirit.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+</div>
+
+
+<script>
+    var addthis_share = {
+        url: "",
+        title: "INTERUNI 2015 DRAWS"
+    };
+    var diagram_array= [
+            "http://www.gliffy.com/go/publish/image/8247875/L.png",
+            "http://www.gliffy.com/go/publish/image/8270899/L.png",
+            "http://www.gliffy.com/go/publish/image/8347099/L.png",
+            "http://www.gliffy.com/go/publish/image/8347163/L.png",
+            "http://www.gliffy.com/go/publish/image/8347463/L.png"
+
+    ];
+    var diagram_id=0;
+    $(document).ready(function(){
+
+                $("li").click(function (e) {
+            $("li").removeClass("active");
+            $(this).addClass("active");
+            console.log($(this).attr('id'));
+            diagram_id= getDiagramId( $(this).attr('id'));
+
+
+
+
+            $("#draw-diagram").html("<img class='img-responsive' src='"+ diagram_array[diagram_id]+"'>");
+
+            addthis_share.url= window.location.href;
+
+
+        });
+
+
+        var url      = window.location.href;
+        console.log(url[url.length-1]);
+        if(url[url.length-1] == '/'){
+            url= url.substring(0, url.length-1);
+            console.log(url);
+        }
+
+        var href= url.substring(url.length, url.length-4);
+
+
+        if(href[0] == '#'){
+            var id= href;
+            $("li").removeClass("active");
+            $(id).addClass("active");
+            diagram_id= getDiagramId(href.substring(1, href.length));
+            $("#draw-diagram").html("<img class='img-responsive' src='"+ diagram_array[diagram_id]+"'>");
+        }
+
+        console.log(href);
+
+        diagram_id= getDiagramId($("li[class*='active']").attr('id'));
+        $("#draw-diagram").html("<img class='img-responsive' src='"+ diagram_array[diagram_id]+"'>");
+
+    });
+
+
+    function getDiagramId(htmlId){
+        switch(htmlId) {
+            case 'crk':
+                return 0;
+                break;
+            case 'rby':
+                return 1;
+                break;
+            case 'bbm':
+                return 2;
+                break;
+            case 'bbw':
+                return 3;
+                break;
+            case 'hky':
+                return 4;
+                break;
+            default:
+                return 0;
+        }
+    }
+    
+    
+</script>
+<!--start of google analytics-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37983557-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<!--end of google analytics-->
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5584ec766fa66f87" async="async"></script>
+
+</body>
+</html>

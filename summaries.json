@@ -1,0 +1,32 @@
+[
+  {
+    "teamA": "UOM",
+    "teamB": "UOK",
+    "teamAName":"university of moratuwa",
+    "teamBName":"university of kelaniya",
+    "heading":"rugby semi finals",
+    "teamA_score": 70,
+    "teamB_score": 50,
+    "summary": "any text here about the match summary and stuffs"
+  },
+  {
+    "teamA": "UOP",
+    "teamB": "UOJ",
+    "teamAName":"university of peradenya",
+    "teamBName":"university of jaffna",
+    "heading":"cricket final",
+    "teamA_score": 20,
+    "teamB_score": 30,
+    "summary": "peradeniya won by 2 wickets and won the interuni finals, the will meet moratuwa at finals."
+  },
+  {
+    "teamA": "UOC",
+    "teamB": "UOK",
+    "teamAName":"university of colombo",
+    "teamBName":"university of kelaniya",
+    "heading":"interuni volleyball finals",
+    "teamA_score": 21,
+    "teamB_score": 24,
+    "summary": "university of colombo won the match by beating 3 matches out of 4 matches."
+  }
+]

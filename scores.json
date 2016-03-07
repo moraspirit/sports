@@ -1,0 +1,38 @@
+[
+  {
+    "uni_name":"UOM",
+    "full_name": "university of moratuwa",
+    "score":245
+  },
+  {
+    "uni_name":"UOK",
+    "full_name": "university of kelaniya",
+    "score": 190
+  },
+  {
+    "uni_name":"UOP",
+    "full_name": "university of peradeniya",
+    "score": 30
+  },
+  {
+    "uni_name":"UOJ",
+    "full_name": "university of sri jayawardenapura",
+    "score": 110
+  },
+  {
+    "uni_name":"UOR",
+    "full_name": "university of ruhuna",
+    "score": 90
+  },
+  {
+    "uni_name":"UOJ",
+    "full_name": "university of jaffna",
+    "score": 40
+  },
+  {
+    "uni_name":"UOC",
+    "full_name": "university of colombo",
+    "score": 140
+  }
+
+]

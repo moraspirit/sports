@@ -1,0 +1,14 @@
+[05-Apr-2015 01:51:00 America/New_York] ERROR: 500 | Server URL is invalid
+[12-May-2015 20:36:08 America/New_York] PHP Catchable fatal error:  Object of class SmsSender could not be converted to string in /home/morasp5/public_html/sports/backend/controllers/sms.php on line 70
+[12-May-2015 20:37:34 America/New_York] app: APP_011797
+[12-May-2015 20:37:34 America/New_York] PASSWORD: 95cb8d2b34fab59d3bde13a572e96f57
+[12-May-2015 20:37:34 America/New_York] sender: tel:A#3B4KOMAcz/JakeH7WYW0Dt/pnAF5FPCivPZWp/onpfcoryF4pV+QI7whS6tzf7Epfrj
+[12-May-2015 20:47:44 America/New_York] PHP Warning:  Missing argument 3 for SmsSender::sms(), called in /home/morasp5/public_html/sports/backend/controllers/sms.php on line 83 and defined in /home/morasp5/public_html/sports/backend/lib/sms/SmsSender.php on line 27
+[12-May-2015 20:47:44 America/New_York] PHP Warning:  Missing argument 4 for SmsSender::sms(), called in /home/morasp5/public_html/sports/backend/controllers/sms.php on line 83 and defined in /home/morasp5/public_html/sports/backend/lib/sms/SmsSender.php on line 27
+[12-May-2015 20:47:44 America/New_York] PHP Warning:  Missing argument 5 for SmsSender::sms(), called in /home/morasp5/public_html/sports/backend/controllers/sms.php on line 83 and defined in /home/morasp5/public_html/sports/backend/lib/sms/SmsSender.php on line 27
+[12-May-2015 20:47:44 America/New_York] PHP Warning:  Missing argument 6 for SmsSender::sms(), called in /home/morasp5/public_html/sports/backend/controllers/sms.php on line 83 and defined in /home/morasp5/public_html/sports/backend/lib/sms/SmsSender.php on line 27
+[12-May-2015 20:47:44 America/New_York] PHP Warning:  Missing argument 7 for SmsSender::sms(), called in /home/morasp5/public_html/sports/backend/controllers/sms.php on line 83 and defined in /home/morasp5/public_html/sports/backend/lib/sms/SmsSender.php on line 27
+[12-May-2015 20:47:44 America/New_York] PHP Warning:  Missing argument 8 for SmsSender::sms(), called in /home/morasp5/public_html/sports/backend/controllers/sms.php on line 83 and defined in /home/morasp5/public_html/sports/backend/lib/sms/SmsSender.php on line 27
+[12-May-2015 20:47:44 America/New_York] PHP Warning:  Missing argument 9 for SmsSender::sms(), called in /home/morasp5/public_html/sports/backend/controllers/sms.php on line 83 and defined in /home/morasp5/public_html/sports/backend/lib/sms/SmsSender.php on line 27
+[12-May-2015 20:47:44 America/New_York] PHP Warning:  Missing argument 10 for SmsSender::sms(), called in /home/morasp5/public_html/sports/backend/controllers/sms.php on line 83 and defined in /home/morasp5/public_html/sports/backend/lib/sms/SmsSender.php on line 27
+[12-May-2015 23:40:32 America/New_York] Response :

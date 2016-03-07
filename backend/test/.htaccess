@@ -1,0 +1,5 @@
+AuthName "Restricted Area" 
+AuthType Basic 
+AuthUserFile /home/morasp5/public_html/sports/backend/.htpasswd 
+AuthGroupFile /dev/null 
+require valid-user
