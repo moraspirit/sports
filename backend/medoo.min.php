@@ -4,7 +4,7 @@ class medoo{
 	protected $database_type='mysql';
 	protected $server='localhost';
 	protected $username='morasp5_interuni';
-	protected $password='!nteruni';
+	protected $password='';
 	protected $database_file;
 	protected $socket;
 	protected $port;

@@ -17,17 +17,17 @@ app.controller("controller", function ($scope, $http) {
     $scope.selectValue= 0;
     $scope.scores = [];
     $scope.games = [];
-    $http.get("http://sports.moraspirit.com/backend/fetch.php?type=alls")
+    $http.get("/sports/backend/fetch.php?type=alls")
         .success(function(response) {
             $scope.scores = response;
             console.log($scope.scores);
 
-            $http.get("http://sports.moraspirit.com/backend/fetch.php?type=allu")
+            $http.get("/sports/backend/fetch.php?type=allu")
                 .success(function(response) {
                     $scope.unis = response;
                     console.log($scope.unis);
 
-                    $http.get("http://sports.moraspirit.com/backend/fetch.php?type=allg")
+                    $http.get("/sports/backend/fetch.php?type=allg")
                         .success(function(response) {
                             $scope.games = response;
                             console.log($scope.games);

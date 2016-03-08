@@ -14,11 +14,11 @@ app.controller('scoreCtrl', function($scope, $http) {
 
     uniNames= [];
 
-    $http.get("http://sports.moraspirit.com/backend/fetch.php?type=scr")
+    $http.get("/sports/backend/fetch.php?type=scr")
         .success(function(response) {
             $scope.scores = response;
 
-            $http.get("http://sports.moraspirit.com/backend/fetch.php?type=allu").success(function(response){
+            $http.get("/sports/backend/fetch.php?type=allu").success(function(response){
                 uniNames= response;
                 console.log(uniNames);
 
@@ -68,7 +68,7 @@ app.controller('scoreCtrl', function($scope, $http) {
 
         });
 
-    $http.get("http://sports.moraspirit.com/backend/fetch.php?type=sum").success(function(response){
+    $http.get("/sports/backend/fetch.php?type=sum").success(function(response){
         $scope.summaries= response;
         console.log($scope.summaries);
 
