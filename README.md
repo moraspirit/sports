@@ -18,4 +18,5 @@ class medoo{
 
 then navigate to `localhost/sports` .
 
+![moraspirit logo](http://moraspirit.com/sites/default/files/moraspirit_text_logo_200.png)  
 baked with ♥♥ in UOM.
